@@ -12,10 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // 访问 api 时，会自动请求 /static/mock下的数据
-      '/api': {
-        target: 'http://localhost:8080',
+      '/': {
+        target: 'http://192.168.80.140:8888',
+        changeOrigin: true,//是否允许跨越
         pathRewrite: {
-          '^/api': '/static/mock'
+          '/': '',//重写,
         }
       }
     },
