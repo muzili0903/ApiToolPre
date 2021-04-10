@@ -1,19 +1,24 @@
 <template>
   <div>
+    <signin-home v-show="!this.user"></signin-home>
     <header-home></header-home>
-    <signin-home></signin-home>
   </div>
 </template>
 
 <script>
-import SigninHome from './components/Signin'
 import HeaderHome from './components/Header'
+import SigninHome from './components/Signin'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      user: ''
+    }
+  },
   components: {
-    HeaderHome,
-    SigninHome
+    SigninHome,
+    HeaderHome
   }
 }
 </script>

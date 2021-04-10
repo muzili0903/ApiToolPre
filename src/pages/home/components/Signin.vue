@@ -1,18 +1,25 @@
 <template>
-  <div class="container-signin">
-    <form action="">
-      <span class="title">账号：</span><input type="text" placeholder="请输入账号" v-model="signinData.user">
-      <span class="title">密码：</span><input type="password" placeholder="请输入密码" v-model="signinData.password">
-    </form>
-    <span class="but-submit" @click="onSubmit()"><button class="but">登录</button></span>
+  <div>
+    <header-home></header-home>
+    <div class="container-signin">
+      <form action="">
+        <span class="title">账号：</span><input type="text" placeholder="请输入账号" v-model="signinData.user">
+        <span class="title">密码：</span><input type="password" placeholder="请输入密码" v-model="signinData.password">
+      </form>
+      <span class="but-submit" @click="onSubmit()">
+        <button class="but">登录</button>
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import HeaderHome from './Header'
 
 export default {
   name: 'SigninHome',
+  components: {HeaderHome},
   data () {
     return {
       signinData: {
@@ -32,7 +39,11 @@ export default {
         url: '/api/user/login',
         data: formData
       }).then((res) => {
-        console.log(res)
+        res = res.data
+        if (res.code === 0 && res.data) {
+          this.signinData.user = res.data.user
+          this.$router.push({path: 'register'})
+        }
       }).catch((error) => {
         console.log('issues 页面出错了', error)
       })
