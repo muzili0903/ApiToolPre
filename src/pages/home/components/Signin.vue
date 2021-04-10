@@ -29,7 +29,7 @@ export default {
       }
       axios({
         method: 'post',
-        url: '/user/login',
+        url: '/api/user/login',
         data: formData
       }).then((res) => {
         console.log(res)

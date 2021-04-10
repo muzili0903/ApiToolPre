@@ -10,15 +10,15 @@ import 'styles/reset.css'
 import 'styles/border.css'
 // import 'styles/iconfont.css'
 import 'swiper/swiper-bundle.css'
-import Axios from 'axios'
+// import Axios from 'axios'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
-Vue.prototype.$axios = Axios
-Axios.defaults.baseURL = 'http://192.168.80.140:8888'
-Axios.defaults.headers.post['Content-Type'] = 'application/json'
+// Vue.prototype.$axios = Axios
+// Axios.defaults.baseURL = 'http://192.168.80.140:8888'
+// Axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 /* eslint-disable no-new */
 new Vue({

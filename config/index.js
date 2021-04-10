@@ -16,7 +16,7 @@ module.exports = {
         target: 'http://192.168.80.140:8888',
         changeOrigin: true,//是否允许跨越
         pathRewrite: {
-          '/': '',//重写,
+          '/api': '',//重写,
         }
       }
     },
