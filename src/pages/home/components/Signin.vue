@@ -41,8 +41,9 @@ export default {
       }).then((res) => {
         res = res.data
         if (res.code === 0 && res.data) {
-          this.signinData.user = res.data.user
-          this.$router.push({path: 'register'})
+          console.log('res.data.data.user', res.data.data.user)
+          this.$store.commit('changeUserName', res.data.data.user)
+          this.$router.push({path: '/'})
         }
       }).catch((error) => {
         console.log('issues 页面出错了', error)
