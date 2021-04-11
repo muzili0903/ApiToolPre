@@ -5,6 +5,7 @@ import mutations from './mutations'
 
 Vue.use(Vuex)
 
+// 创建仓库
 export default new Vuex.Store({
   state,
   // 非批量数据可以省略调用 actions 可以直接调用commit

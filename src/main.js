@@ -10,16 +10,39 @@ import 'styles/reset.css'
 import 'styles/border.css'
 // import 'styles/iconfont.css'
 import 'swiper/swiper-bundle.css'
+// import Axios from 'axios'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+
+// Vue.prototype.$axios = Axios
+// Axios.defaults.baseURL = 'http://192.168.80.140:8888'
+// Axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
+  components: {App},
   template: '<App/>'
+})
+
+// 路由判断登录 根据路由配置文件的参数
+router.beforeEach((to, from, next) => {
+  console.log('localStorage.userName', localStorage.userName)
+  if (to.matched.some(record => record.meta.needLogin)) {
+    if (localStorage.userName) {
+      next()
+    } else {
+      next({
+        path: '/signin',
+        query: {redirect: to.fullPath}
+      })
+    }
+  } else {
+    console.log('localStorage.userName', localStorage.userName)
+    next()
+  }
 })

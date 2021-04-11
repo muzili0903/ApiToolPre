@@ -1,8 +1,10 @@
+// mutations 改变 state 的值
+
 export default {
-  changeCity (state, city) {
-    state.city = city
+  changeUserName (state, userName) {
+    state.userName = userName
     try {
-      localStorage.city = city
+      localStorage.userName = userName
     } catch (e) {
     }
   }
