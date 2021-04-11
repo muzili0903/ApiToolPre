@@ -30,6 +30,14 @@ export default {
   },
   methods: {
     onSubmit () {
+      if (!this.signinData.user) {
+        alert('请输入账号')
+        return
+      }
+      if (!this.signinData.password) {
+        alert('请输入密码')
+        return
+      }
       let formData = new FormData()
       for (let key in this.signinData) {
         formData.append(key, this.signinData[key])
@@ -41,9 +49,12 @@ export default {
       }).then((res) => {
         res = res.data
         if (res.code === 0 && res.data) {
-          console.log('res.data.data.user', res.data.data.user)
+          console.log('登录成功', res.data.data.user)
           this.$store.commit('changeUserName', res.data.data.user)
           this.$router.push({path: '/'})
+        }
+        if (res.code !== 0) {
+          alert('账号或密码错误！')
         }
       }).catch((error) => {
         console.log('issues 页面出错了', error)

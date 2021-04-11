@@ -1,8 +1,8 @@
 // 存公用数据
 let defaultUser = ''
 try {
-  if (localStorage.userName) {
-    defaultUser = localStorage.userName
+  if (sessionStorage.userName) {
+    defaultUser = sessionStorage.userName
     console.log('defaultUser', defaultUser)
   }
 } catch (e) {

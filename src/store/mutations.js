@@ -4,7 +4,7 @@ export default {
   changeUserName (state, userName) {
     state.userName = userName
     try {
-      localStorage.userName = userName
+      sessionStorage.userName = userName
     } catch (e) {
     }
   }

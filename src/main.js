@@ -31,7 +31,6 @@ new Vue({
 
 // 路由判断登录 根据路由配置文件的参数
 router.beforeEach((to, from, next) => {
-  console.log('localStorage.userName', localStorage.userName)
   if (to.matched.some(record => record.meta.needLogin)) {
     if (store.state.userName) {
       next()
@@ -42,7 +41,6 @@ router.beforeEach((to, from, next) => {
       })
     }
   } else {
-    console.log('localStorage.userName', localStorage.userName)
     next()
   }
 })
