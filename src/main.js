@@ -33,7 +33,7 @@ new Vue({
 router.beforeEach((to, from, next) => {
   console.log('localStorage.userName', localStorage.userName)
   if (to.matched.some(record => record.meta.needLogin)) {
-    if (localStorage.userName) {
+    if (store.state.userName) {
       next()
     } else {
       next({
