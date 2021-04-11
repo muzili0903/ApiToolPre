@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'RegisterHome',
   data () {
@@ -19,6 +21,48 @@ export default {
         password: '',
         pwd: ''
       }
+    }
+  },
+  methods: {
+    onSubmit () {
+      if (!this.registerData.user) {
+        alert('请输入账号')
+        return
+      }
+      if (!this.registerData.password) {
+        alert('请输入密码')
+        return
+      }
+      if (!this.registerData.pwd) {
+        alert('请确认密码')
+        return
+      }
+      if (this.registerData.password !== this.registerData.pwd) {
+        alert('密码不一致')
+        return
+      }
+      let formData = new FormData()
+      for (let key in this.registerData) {
+        formData.append(key, this.registerData[key])
+      }
+      axios({
+        method: 'post',
+        url: '/api/user/register',
+        data: formData
+      }).then((res) => {
+        console.log(res.data)
+        res = res.data
+        if (res.code === 0 && res.data) {
+          console.log('注册成功', res.data.msg)
+          this.$store.commit('changeUserName', '')
+          this.$router.push({path: '/signin'})
+        }
+        if (res.code !== 0) {
+          alert(res.data.msg)
+        }
+      }).catch((error) => {
+        console.log('issues 页面出错了', error)
+      })
     }
   }
 }
