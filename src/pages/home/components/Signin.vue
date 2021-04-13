@@ -9,6 +9,8 @@
       <span class="but-submit" @click="onSubmit()">
         <button class="but">登录</button>
       </span>
+      <dialog-bar v-model="dialog.sendVal" :type="this.dialog.type" :title="this.dialog.title"
+                :content="this.dialog.content"></dialog-bar>
     </div>
   </div>
 </template>
@@ -16,26 +18,35 @@
 <script>
 import axios from 'axios'
 import HeaderHome from './Header'
+import dialogBar from 'common/Dialog'
 
 export default {
   name: 'SigninHome',
-  components: {HeaderHome},
+  components: {HeaderHome, dialogBar},
   data () {
     return {
       signinData: {
         user: '',
         password: ''
+      },
+      dialog: {
+        sendVal: false,
+        content: '',
+        title: '登录温馨提示',
+        type: 'confirm'
       }
     }
   },
   methods: {
     onSubmit () {
       if (!this.signinData.user) {
-        alert('请输入账号')
+        this.dialog.sendVal = true
+        this.dialog.content = '请输入账号，再提交'
         return
       }
       if (!this.signinData.password) {
-        alert('请输入密码')
+        this.dialog.sendVal = true
+        this.dialog.content = '请输入密码，再提交'
         return
       }
       let formData = new FormData()
@@ -49,15 +60,16 @@ export default {
       }).then((res) => {
         res = res.data
         if (res.code === 0 && res.data) {
-          console.log('登录成功', res.data.data.user)
           this.$store.commit('changeUserName', res.data.data.user)
           this.$router.push({path: '/'})
         }
         if (res.code !== 0) {
-          alert('账号或密码错误！')
+          this.dialog.sendVal = true
+          this.dialog.content = '账号或密码错误，请重新输入'
         }
       }).catch((error) => {
-        console.log('issues 页面出错了', error)
+        this.dialog.sendVal = true
+        this.dialog.content = 'issues 页面出错了' + error
       })
     }
   }
