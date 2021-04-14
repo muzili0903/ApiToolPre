@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {
       // 访问 api 时，会自动请求 /static/mock下的数据
       '/': {
-        target: 'http://192.168.80.140:8888',
+        target: 'http://192.168.80.142:8888',
         changeOrigin: true,//是否允许跨越
         pathRewrite: {
           '/api': '',//重写,
