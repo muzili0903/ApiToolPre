@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <left-index></left-index>
-    <case-manage></case-manage>
     <dispose-manage></dispose-manage>
+    <case-manage></case-manage>
     <execute-manage></execute-manage>
   </div>
 </template>
@@ -27,7 +27,8 @@ export default {
 <style lang="stylus" scoped>
   .content
     background red
-    width 20%
+    width 14%
+    height 100%
     line-height 100%
     float left
 </style>

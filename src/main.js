@@ -11,10 +11,15 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 import 'swiper/swiper-bundle.css'
 // import Axios from 'axios'
+import 'xe-utils'
+import VXETable from 'vxe-table'
+import 'vxe-table/lib/style.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+
+Vue.use(VXETable)
 
 // Vue.prototype.$axios = Axios
 // Axios.defaults.baseURL = 'http://192.168.80.140:8888'
