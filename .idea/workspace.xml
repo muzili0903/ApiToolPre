@@ -2,417 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feb808fb-9bef-4bd1-90f3-fe48a48010b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/mixins.styl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/homeRight/components/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/homeRight/components/EnvDispose.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/adapters/fs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/constants.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/constants.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/index.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/async.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/common.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/providers/sync.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/settings.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/types/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/fs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/out/utils/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/adapters/fs.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/adapters/fs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/constants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/index.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/async.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/async.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/common.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/common.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/sync.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/providers/sync.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/settings.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/settings.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/utils/fs.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/utils/fs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/src/utils/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.scandir/tsconfig.tsbuildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/adapters/fs.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/index.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/async.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/providers/sync.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/settings.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/types/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/out/types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/adapters/fs.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/adapters/fs.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/index.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/providers/async.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/providers/async.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/providers/sync.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/providers/sync.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/settings.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/settings.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.stat/tsconfig.tsbuildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/index.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/async.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/stream.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/providers/sync.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/async.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/common.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/reader.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/readers/sync.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.spec.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.spec.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/settings.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/tests/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/tests/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/tests/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/types/index.d.ts.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/out/types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/index.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/async.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/async.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/stream.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/stream.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/sync.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/providers/sync.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/async.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/async.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/common.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/common.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/reader.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/reader.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/sync.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/readers/sync.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/settings.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/settings.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/tests/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@nodelib/fs.walk/tsconfig.tsbuildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/node_modules/micromatch/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/node_modules/micromatch/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/node_modules/micromatch/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/node_modules/micromatch/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/node_modules/micromatch/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/managers/tasks.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/managers/tasks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/async.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/async.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/deep.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/deep.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/entry.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/entry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/error.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/filters/error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/matchers/matcher.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/matchers/matcher.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/matchers/partial.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/matchers/partial.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/provider.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/provider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/transformers/entry.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/providers/transformers/entry.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/reader.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/reader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/sync.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/readers/sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/settings.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/array.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/array.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/errno.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/errno.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/fs.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/fs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/path.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/path.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/pattern.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/pattern.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/string.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/out/utils/string.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fast-glob/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/.github/workflows/ci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/bench.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/queue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/test/example.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/test/promise.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/test/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fastq/test/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/.nycrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-bigints/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/node-4+.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/node-iojs.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/node-pretest.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/node-zero.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/rebase.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.github/workflows/require-allow-edits.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/.nycrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/test/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-bigint/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/node-4+.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/node-harmony.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/node-iojs.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/node-pretest.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/node-zero.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/rebase.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.github/workflows/require-allow-edits.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/.nycrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-boolean-object/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/.github/workflows/rebase.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-number-object/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/dist/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/dist/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/dist/index.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/full/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/full/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/full/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/full/index.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/json/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/json/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/json/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/json/index.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/lite/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/lite/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/lite/index.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/lite/index.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/klona/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/merge2/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/merge2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/merge2/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/merge2/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/queue-microtask/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/queue-microtask/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/queue-microtask/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/queue-microtask/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/queue-microtask/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/.coveralls.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/benchmarks/createNoCodeFunction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/benchmarks/fib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/benchmarks/reuseNoCodeFunction.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/reusify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/reusify/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/run-parallel/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/run-parallel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/run-parallel/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/run-parallel/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/.nycrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/unbox-primitive/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/.nycrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/which-boxed-primitive/test/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/homeLeft/Left.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeLeft/Left.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/homeRight/Right.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeRight/Right.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/state.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -571,47 +169,137 @@
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="11" />
-          <entry key="js" value="763" />
-          <entry key="vue" value="5214" />
+          <entry key="js" value="919" />
+          <entry key="vue" value="5694" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="11" />
-          <entry key="JavaScript" value="763" />
-          <entry key="Vue.js" value="5214" />
+          <entry key="JavaScript" value="919" />
+          <entry key="Vue.js" value="5694" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="30" />
+          <entry key="js" value="35" />
           <entry key="py" value="1" />
           <entry key="styl" value="1" />
-          <entry key="vue" value="47" />
+          <entry key="vue" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="35" />
           <entry key="Python" value="1" />
           <entry key="Stylus" value="1" />
-          <entry key="Vue.js" value="47" />
+          <entry key="Vue.js" value="66" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/home/Home.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding>
+                <element signature="e#140#184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/Left.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/home/components/Header.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="25" />
+              <folding>
+                <element signature="e#534#559#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/homeRight/Right.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <folding>
+                <element signature="e#130#173#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/homeRight/components/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+            <state relative-caret-position="357">
+              <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/state.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/mutations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -625,8 +313,8 @@
         <option value="Gherkin feature file" />
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -661,7 +349,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/test/test.vue" />
         <option value="$PROJECT_DIR$/node_modules/fastclick/lib/fastclick.js" />
         <option value="C:/Program Files/NVIDIA Corporation/NVIDIA GeForce Experience/osc/app.js" />
         <option value="$PROJECT_DIR$/src/assets/styles/varibles.styl" />
@@ -690,9 +377,6 @@
         <option value="$PROJECT_DIR$/src/pages/home/components/Header.html" />
         <option value="$PROJECT_DIR$/src/pages/home/Signin.vue" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/store/mutations.js" />
-        <option value="$PROJECT_DIR$/src/store/state.js" />
         <option value="$PROJECT_DIR$/src/common/Dialog.vue" />
         <option value="$PROJECT_DIR$/src/pages/home/components/Register.vue" />
         <option value="$PROJECT_DIR$/src/pages/home/components/Signin.vue" />
@@ -703,15 +387,19 @@
         <option value="$PROJECT_DIR$/src/pages/home-right/Right.vue" />
         <option value="$PROJECT_DIR$/src/pages/home/Home.vue" />
         <option value="$PROJECT_DIR$/src/assets/styles/iconfont.css" />
-        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue" />
-        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue" />
-        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue" />
-        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue" />
         <option value="$PROJECT_DIR$/src/pages/homeLeft/Left.vue" />
-        <option value="$PROJECT_DIR$/src/pages/homeRight/Right.vue" />
         <option value="$PROJECT_DIR$/src/table/index.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/pages/homeRight/components/Index.vue" />
+        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue" />
+        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue" />
+        <option value="$PROJECT_DIR$/src/pages/homeRight/components/envDispose.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/store/state.js" />
+        <option value="$PROJECT_DIR$/src/store/mutations.js" />
+        <option value="$PROJECT_DIR$/src/pages/homeRight/Right.vue" />
+        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue" />
+        <option value="$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue" />
       </list>
     </option>
   </component>
@@ -730,8 +418,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="716" />
-    <option name="y" value="122" />
+    <option name="x" value="577" />
+    <option name="y" value="66" />
     <option name="width" value="1210" />
     <option name="height" value="1012" />
   </component>
@@ -751,11 +439,6 @@
             <path>
               <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
               <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -763,6 +446,36 @@
               <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="homeLeft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="homeLeft" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
@@ -778,6 +491,18 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="homeRight" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApiToolPre" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApiToolPre" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -869,7 +594,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18766756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -885,7 +609,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3371105" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3371105" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -901,7 +625,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/mock/city.json" />
     <entry file="file://$PROJECT_DIR$/static/mock/index.json" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
       <provider selected="true" editor-type-id="text-editor">
@@ -959,34 +682,10 @@
     <entry file="file://$PROJECT_DIR$/config/dev.env.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/mutations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="1075" column="22" lean-forward="true" selection-start-line="1075" selection-start-column="22" selection-end-line="1075" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,73 +723,10 @@
     <entry file="file://$PROJECT_DIR$/src/assets/styles/reset.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home/components/Header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/home/components/Signin.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/Left.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="27" selection-start-line="27" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/common/Dialog.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
           <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/homeRight/Right.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1115,33 +751,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/table/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="6" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#140#161#0" expanded="true" />
-            <element signature="e#473#490#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1153,10 +768,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/ExecuteManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#140#161#0" expanded="true" />
+            <element signature="e#473#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/components/Signin.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="62" column="66" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="66" />
+          <folding>
+            <element signature="e#643#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeRight/components/EnvDispose.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/CaseManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/components/Header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="25" />
+          <folding>
+            <element signature="e#534#559#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/mutations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/home/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding>
+            <element signature="e#140#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/Left.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/DisposeManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeRight/Right.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding>
+            <element signature="e#130#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/homeRight/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+        <state relative-caret-position="357">
+          <caret line="43" column="2" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/homeLeft/components/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>

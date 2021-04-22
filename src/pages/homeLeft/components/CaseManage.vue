@@ -1,12 +1,28 @@
 <template>
   <div class="content">
-    <span class="iconfont">&#xe68e;</span>案例管理
+    <div @click="handleClick"><span class="iconfont">&#xe68e;</span>案例管理</div>
+    <div class="content-menu" v-show="this.show">
+      <i class="vxe-icon--dot"></i>创建系统案例
+    </div>
+    <div class="content-menu" v-show="this.show">
+      <i class="vxe-icon--dot"></i>案例自动生成
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CaseManage'
+  name: 'CaseManage',
+  data () {
+    return {
+      show: false
+    }
+  },
+  methods: {
+    handleClick () {
+      this.show = !this.show
+    }
+  }
 }
 </script>
 
@@ -17,4 +33,7 @@ export default {
     background green
     width 80%
     float right
+    .content-menu
+      padding-top .2rem
+      padding-left .1rem
 </style>

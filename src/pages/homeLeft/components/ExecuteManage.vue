@@ -1,10 +1,28 @@
 <template>
-  <div class="content"><span class="iconfont">&#xe68e;</span>执行管理</div>
+  <div class="content">
+  <div @click="handleClick"><span class="iconfont">&#xe68e;</span>执行管理</div>
+    <div class="content-menu" v-show="this.show">
+      <i class="vxe-icon--dot"></i>案例执行记录
+    </div>
+    <div class="content-menu" v-show="this.show">
+      <i class="vxe-icon--dot"></i>案例统计
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ExecuteManage'
+  name: 'ExecuteManage',
+  data () {
+    return {
+      show: false
+    }
+  },
+  methods: {
+    handleClick () {
+      this.show = !this.show
+    }
+  }
 }
 </script>
 
@@ -15,4 +33,7 @@ export default {
     background green
     width 80%
     float right
+    .content-menu
+      padding-top .2rem
+      padding-left .1rem
 </style>

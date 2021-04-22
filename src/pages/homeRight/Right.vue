@@ -1,15 +1,25 @@
 <template>
   <div class="content">
-    <right-index></right-index>
+    <right-index v-show="this.currentIndex==='Index'"></right-index>
+    <env-dispose v-show="this.currentIndex==='envDispose'"></env-dispose>
   </div>
 </template>
 
 <script>
 import RightIndex from './components/Index'
+import EnvDispose from './components/EnvDispose'
+import {mapState} from 'vuex'
+
 export default {
   name: 'HomeRight',
   components: {
-    RightIndex
+    RightIndex,
+    EnvDispose
+  },
+  computed: {
+    ...mapState({
+      currentIndex: 'currentIndex'
+    })
   }
 }
 </script>
