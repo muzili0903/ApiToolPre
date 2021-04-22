@@ -1,10 +1,10 @@
 <template>
   <div class="content">
   <div @click="handleClick"><span class="iconfont">&#xe68e;</span>执行管理</div>
-    <div class="content-menu" v-show="this.show">
+    <div class="content-menu" v-show="this.show" @click="caseExecuteLogClickChange">
       <i class="vxe-icon--dot"></i>案例执行记录
     </div>
-    <div class="content-menu" v-show="this.show">
+    <div class="content-menu" v-show="this.show" @click="caseCensusClickChange">
       <i class="vxe-icon--dot"></i>案例统计
     </div>
   </div>
@@ -21,6 +21,12 @@ export default {
   methods: {
     handleClick () {
       this.show = !this.show
+    },
+    caseExecuteLogClickChange () {
+      this.$store.commit('changeIndex', 'caseExecuteLog')
+    },
+    caseCensusClickChange () {
+      this.$store.commit('changeIndex', 'caseCensus')
     }
   }
 }

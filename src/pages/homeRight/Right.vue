@@ -2,19 +2,34 @@
   <div class="content">
     <right-index v-show="this.currentIndex==='Index'"></right-index>
     <env-dispose v-show="this.currentIndex==='envDispose'"></env-dispose>
+    <sql-dispose v-show="this.currentIndex==='sqlDispose'"></sql-dispose>
+    <case-create v-show="this.currentIndex==='caseCreate'"></case-create>
+    <case-auto v-show="this.currentIndex==='caseAuto'"></case-auto>
+    <case-execute-log v-show="this.currentIndex==='caseExecuteLog'"></case-execute-log>
+    <case-census v-show="this.currentIndex==='caseCensus'"></case-census>
   </div>
 </template>
 
 <script>
 import RightIndex from './components/Index'
 import EnvDispose from './components/EnvDispose'
+import SqlDispose from './components/SqlDispose'
+import CaseCreate from './components/CaseCreate'
+import CaseAuto from './components/CaseAuto'
+import CaseExecuteLog from './components/CaseExecuteLog'
+import CaseCensus from './components/CaseCensus'
 import {mapState} from 'vuex'
 
 export default {
   name: 'HomeRight',
   components: {
     RightIndex,
-    EnvDispose
+    EnvDispose,
+    SqlDispose,
+    CaseCreate,
+    CaseAuto,
+    CaseExecuteLog,
+    CaseCensus
   },
   computed: {
     ...mapState({
