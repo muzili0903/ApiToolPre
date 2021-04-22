@@ -1,12 +1,12 @@
 <template>
   <div>
-    envDispose
+    SqlDispose
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EnvDispose'
+  name: 'SqlDispose'
 }
 </script>
 

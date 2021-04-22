@@ -1,12 +1,12 @@
 <template>
   <div>
-    envDispose
+    CaseCreate
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EnvDispose'
+  name: 'CaseCreate'
 }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
   <div>
-    envDispose
+    CaseExecuteLog
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EnvDispose'
+  name: 'CaseExecuteLog'
 }
 </script>
 

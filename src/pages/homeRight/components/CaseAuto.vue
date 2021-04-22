@@ -1,12 +1,12 @@
 <template>
   <div>
-    envDispose
+    CaseAuto
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EnvDispose'
+  name: 'CaseAuto'
 }
 </script>
 

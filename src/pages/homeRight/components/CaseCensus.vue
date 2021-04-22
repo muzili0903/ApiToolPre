@@ -1,15 +1,15 @@
 <template>
   <div>
-    envDispose
+    CaseCensus
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EnvDispose'
+  name: 'CaseCensus'
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 
 </style>
