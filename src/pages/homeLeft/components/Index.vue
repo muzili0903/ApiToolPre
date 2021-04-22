@@ -1,10 +1,15 @@
 <template>
-    <div class="content">首页</div>
+  <div class="content" @click="indexClickChange">首页</div>
 </template>
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Index',
+  methods: {
+    indexClickChange () {
+      this.$store.commit('changeIndex', 'Index')
+    }
+  }
 }
 </script>
 

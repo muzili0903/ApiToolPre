@@ -7,5 +7,12 @@ export default {
       sessionStorage.userName = userName
     } catch (e) {
     }
+  },
+  changeIndex (state, currentIndex) {
+    state.currentIndex = currentIndex
+    try {
+      sessionStorage.currentIndex = currentIndex
+    } catch (e) {
+    }
   }
 }
