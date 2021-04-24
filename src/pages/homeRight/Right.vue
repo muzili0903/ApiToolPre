@@ -3,6 +3,7 @@
     <right-index v-show="this.currentIndex==='Index'"></right-index>
     <env-dispose v-show="this.currentIndex==='envDispose'"></env-dispose>
     <sql-dispose v-show="this.currentIndex==='sqlDispose'"></sql-dispose>
+    <!--<test v-show="this.currentIndex==='sqlDispose'"></test>-->
     <case-create v-show="this.currentIndex==='caseCreate'"></case-create>
     <case-auto v-show="this.currentIndex==='caseAuto'"></case-auto>
     <case-execute-log v-show="this.currentIndex==='caseExecuteLog'"></case-execute-log>
@@ -18,6 +19,7 @@ import CaseCreate from './components/CaseCreate'
 import CaseAuto from './components/CaseAuto'
 import CaseExecuteLog from './components/CaseExecuteLog'
 import CaseCensus from './components/CaseCensus'
+import test from './components/test'
 import {mapState} from 'vuex'
 
 export default {
@@ -29,7 +31,8 @@ export default {
     CaseCreate,
     CaseAuto,
     CaseExecuteLog,
-    CaseCensus
+    CaseCensus,
+    test
   },
   computed: {
     ...mapState({
