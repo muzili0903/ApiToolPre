@@ -2,21 +2,36 @@
   <div>
     <vxe-toolbar>
       <template #buttons>
-        <vxe-button @click="getSelectionEvent">获取选中</vxe-button>
+        <vxe-button icon="fa fa-plus" @click="insertEvent()">新增</vxe-button>
       </template>
     </vxe-toolbar>
 
     <vxe-table
-      ref="xTable"
       border
+      resizable
       show-overflow
-      :data="tableData">
-      <vxe-table-column type="checkbox" width="60"></vxe-table-column>
-      <vxe-table-column type="seq" width="60"></vxe-table-column>
-      <vxe-table-column field="name" title="Name" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="sex" title="Sex" :edit-render="{name: 'input'}"></vxe-table-column>
-      <vxe-table-column field="age" title="Age" :edit-render="{name: 'input'}"></vxe-table-column>
+      highlight-hover-row
+      ref="xTable"
+      height="500"
+      :data="tableData"
+      @cell-dblclick="cellDBLClickEvent">
+      <vxe-table-column type="radio" width="60"></vxe-table-column>
+      <vxe-table-column field="sqlType" title="sqlType"></vxe-table-column>
+      <vxe-table-column field="encoding" title="encoding"></vxe-table-column>
+      <vxe-table-column field="host" title="host"></vxe-table-column>
+      <vxe-table-column field="user" title="user" show-overflow></vxe-table-column>
+      <vxe-table-column field="founder" title="founder" show-overflow></vxe-table-column>
+      <vxe-table-column field="port" title="port" show-overflow></vxe-table-column>
+      <vxe-table-column field="dbName" title="dbName" show-overflow></vxe-table-column>
     </vxe-table>
+
+    <vxe-modal v-model="showEdit" :title="selectRow ? '编辑&保存' : '新增&保存'" width="800" min-width="600" min-height="300"
+               :loading="submitLoading" resize destroy-on-close>
+      <template #default>
+        <vxe-form :data="formData" :items="formItems" :rules="formRules" title-align="right" title-width="100"
+                  @submit="submitEvent"></vxe-form>
+      </template>
+    </vxe-modal>
   </div>
 </template>
 
@@ -25,21 +40,152 @@ export default {
   name: 'test',
   data () {
     return {
+      submitLoading: false,
       tableData: [
-        {id: 10001, name: 'Test1', role: 'Develop', sex: '0', age: 28, address: 'vxe-table 从入门到放弃'},
-        {id: 10002, name: 'Test2', role: 'Test', sex: '1', age: 22, address: 'Guangzhou'},
-        {id: 10003, name: 'Test3', role: 'PM', sex: '0', age: 32, address: 'Shanghai'},
-        {id: 10004, name: 'Test4', role: 'Designer', sex: '1', age: 23, address: 'vxe-table 从入门到放弃'},
-        {id: 10005, name: 'Test5', role: 'Develop', sex: '1', age: 30, address: 'Shanghai'},
-        {id: 10006, name: 'Test6', role: 'Designer', sex: '1', age: 21, address: 'vxe-table 从入门到放弃'}
+        {
+          mark: 'mark',
+          sqlType: 'sqlType',
+          host: 'host',
+          user: 'user',
+          founder: 'founder',
+          port: 'port',
+          dbName: 'dbName',
+          encoding: 'encoding'
+        }
+      ],
+      selectRow: null,
+      showEdit: false,
+      sqlTypeList: [
+        {label: 'MySQL', value: '0'},
+        {label: 'Oracle', value: '1'},
+        {label: 'SqlService', value: '2'}
+      ],
+      encodingList: [
+        {label: 'utf-8', value: 'utf-8'},
+        {label: 'gbk', value: 'gbk'}
+      ],
+      formData: {
+        mark: null,
+        sqlType: null,
+        host: null,
+        user: null,
+        founder: null,
+        port: null,
+        dbName: null,
+        encoding: null,
+        password: null
+      },
+      formRules: {
+        dbName: [
+          {required: true, message: '请输入数据库名称'}
+        ],
+        user: [
+          {required: true, message: '请输入用户名'}
+        ],
+        sqlType: [
+          {required: true, message: '请选择数据库类型'}
+        ],
+        host: [
+          {required: true, message: '请输入主机名'},
+          {min: 7, max: 15, message: '长度在 7 到 15 个字符'}
+        ],
+        password: [
+          {required: true, message: '请输入密码'}
+        ],
+        mark: [
+          {required: true, message: '请输入引用标识'}
+        ]
+      },
+      formItems: [
+        {
+          title: 'sql information',
+          span: 24,
+          titleAlign: 'left',
+          titleWidth: 200
+        },
+        {field: 'host', title: '主机名', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入主机名'}}},
+        {field: 'port', title: '端口号', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入端口号'}}},
+        {field: 'user', title: '用户名', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入用户名'}}},
+        {field: 'password', title: '密码', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入用户名'}}},
+        {field: 'dbName', title: '数据库名称', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入数据库名称'}}},
+        {field: 'sqlType', title: '数据库类型', span: 12, itemRender: {name: '$select', options: []}},
+        {field: 'mark', title: '引用标识', span: 12, itemRender: {name: '$input', props: {placeholder: '请输入标识'}}},
+        {field: 'encoding', title: '连接编号', span: 12, itemRender: {name: '$select', options: []}},
+        {
+          align: 'center',
+          span: 24,
+          titleAlign: 'left',
+          itemRender: {
+            name: '$buttons',
+            children: [{props: {type: 'submit', content: '提交', status: 'primary'}}, {
+              props: {
+                type: 'reset',
+                content: '重置'
+              }
+            }]
+          }
+        }
       ]
     }
   },
+  created () {
+    this.formItems[6].itemRender.options = this.sqlTypeList
+    this.formItems[8].itemRender.options = this.encodingList
+  },
   methods: {
-    getSelectionEvent () {
-      const $table = this.$refs.xTable
-      const selectRecords = $table.getCheckboxRecords()
-      console.log(selectRecords)
+    cellDBLClickEvent ({row}) {
+      this.editEvent(row)
+    },
+    insertEvent () {
+      this.formData = {
+        mark: '',
+        sqlType: '',
+        host: '',
+        user: '',
+        founder: '',
+        port: '',
+        dbName: '',
+        encoding: '',
+        password: ''
+      }
+      this.selectRow = null
+      this.showEdit = true
+    },
+    editEvent (row) {
+      this.formData = {
+        mark: row.mark,
+        sqlType: row.sqlType,
+        host: row.host,
+        user: row.user,
+        founder: row.founder,
+        port: row.port,
+        dbName: row.dbName,
+        encoding: row.encoding,
+        password: row.password
+      }
+      this.selectRow = row
+      this.showEdit = true
+    },
+    removeEvent (row) {
+      this.$XModal.confirm('您确定要删除该数据?').then(type => {
+        const $table = this.$refs.xTable
+        if (type === 'confirm') {
+          $table.remove(row)
+        }
+      })
+    },
+    submitEvent () {
+      this.submitLoading = true
+      setTimeout(() => {
+        const $table = this.$refs.xTable
+        this.submitLoading = false
+        this.showEdit = false
+        if (this.selectRow) {
+          Object.assign(this.selectRow, this.formData)
+        } else {
+          $table.insert(this.formData)
+        }
+      }, 500)
     }
   }
 }
