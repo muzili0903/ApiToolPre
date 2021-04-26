@@ -3,6 +3,8 @@
     <vxe-toolbar>
       <template #buttons>
         <vxe-button icon="fa fa-plus" @click="insertEvent()">新增</vxe-button>
+        <vxe-button icon="fa fa-plus" @click="editEvent()">修改</vxe-button>
+        <vxe-button icon="fa fa-plus" @click="getSelectionDetail">删除</vxe-button>
       </template>
     </vxe-toolbar>
 
@@ -152,6 +154,7 @@ export default {
       this.showEdit = true
     },
     editEvent (row) {
+      console.log(row)
       this.formData = {
         mark: row.mark,
         sqlType: row.sqlType,
@@ -166,13 +169,17 @@ export default {
       this.selectRow = row
       this.showEdit = true
     },
+    getSelectionDetail () {
+      const $table = this.$refs.xTable
+      const selectRecords = $table.getRadioRecord()
+      console.log($table)
+      console.log('selectRecords', selectRecords)
+      this.removeEvent(selectRecords)
+    },
     removeEvent (row) {
-      this.$XModal.confirm('您确定要删除该数据?').then(type => {
-        const $table = this.$refs.xTable
-        if (type === 'confirm') {
-          $table.remove(row)
-        }
-      })
+      console.log(row)
+      const $table = this.$refs.xTable
+      $table.remove(row)
     },
     submitEvent () {
       this.submitLoading = true

@@ -2,8 +2,8 @@
   <div class="content">
     <right-index v-show="this.currentIndex==='Index'"></right-index>
     <env-dispose v-show="this.currentIndex==='envDispose'"></env-dispose>
-    <!--<sql-dispose v-show="this.currentIndex==='sqlDispose'"></sql-dispose>-->
-    <test v-show="this.currentIndex==='sqlDispose'"></test>
+    <sql-dispose v-show="this.currentIndex==='sqlDispose'"></sql-dispose>
+    <!--<test v-show="this.currentIndex==='sqlDispose'"></test>-->
     <case-create v-show="this.currentIndex==='caseCreate'"></case-create>
     <case-auto v-show="this.currentIndex==='caseAuto'"></case-auto>
     <case-execute-log v-show="this.currentIndex==='caseExecuteLog'"></case-execute-log>
