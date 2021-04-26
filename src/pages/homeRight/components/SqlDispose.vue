@@ -3,7 +3,8 @@
     <div class="header">header</div>
     <div class="button-list">
       <div class="button" @click="insertEvent"><span style="color: blue" class="iconfont">&#xe61d;</span> 新增</div>
-      <div class="button" @click="getSelectionDetail"><span style="color: black" class="iconfont">&#xe650;</span> 详情</div>
+      <div class="button" @click="getSelectionDetail"><span style="color: black" class="iconfont">&#xe650;</span> 详情
+      </div>
       <div class="button" @click="getEditSelection"><span style="color: darkgray" class="iconfont">&#xe62c;</span> 修改
       </div>
       <div class="button" @click="getRemoveSelection"><span style="color: red" class="iconfont">&#xe60b;</span> 删除</div>
@@ -16,7 +17,8 @@
         height="500"
         row-id="id"
         :data="tableData3"
-        :radio-config="{checkRowKey: defaultSelecteRow}">
+        :radio-config="{checkRowKey: defaultSelecteRow}"
+        @cell-dblclick="cellDBLClickEvent">
         <vxe-table-column type="radio" width="60"></vxe-table-column>
         <vxe-table-column field="mark" title="引用标识"></vxe-table-column>
         <vxe-table-column field="sqlType" title="数据库类型"></vxe-table-column>
@@ -36,13 +38,34 @@
         :layouts="['PrevPage', 'JumpNumber', 'NextPage', 'FullJump', 'Sizes', 'Total']"
         @page-change="handlePageChange3">
       </vxe-pager>
-      <vxe-modal v-model="showEdit" :title="selectRow ? '编辑&保存' : '新增&保存'" width="800" min-width="600" min-height="300"
-               :loading="submitLoading" resize destroy-on-close>
-      <template #default>
-        <vxe-form :data="formData" :items="formItems" :rules="formRules" title-align="right" title-width="100"
-                  @submit="submitEvent"></vxe-form>
-      </template>
-    </vxe-modal>
+      <div v-show="this.showEdit">
+        <vxe-modal v-model="showEdit" :title="selectRow ? '编辑&保存' : '新增&保存'" width="800" min-width="600"
+                   min-height="300"
+                   :loading="submitLoading" resize destroy-on-close>
+          <template #default>
+            <vxe-form :data="formData" :items="formItems" :rules="formRules" title-align="right" title-width="100"
+                      @submit="submitEvent"></vxe-form>
+          </template>
+        </vxe-modal>
+      </div>
+      <div v-show="this.showDetail">
+        <vxe-modal v-model="showDetail" title="查看详情" width="600" height="400" :mask="false" :lock-view="false" resize>
+          <template #default>
+            <vxe-table
+              border="inner"
+              auto-resize
+              show-overflow
+              highlight-hover-row
+              height="auto"
+              :show-header="false"
+              :sync-resize="showDetail"
+              :data="detailData">
+              <vxe-table-column field="label" width="40%"></vxe-table-column>
+              <vxe-table-column field="value"></vxe-table-column>
+            </vxe-table>
+          </template>
+        </vxe-modal>
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +108,8 @@ export default {
       submitLoading: false,
       selectRow: null,
       showEdit: false,
+      showDetail: false,
+      detailData: [],
       sqlTypeList: [
         {label: 'MySQL', value: '0'},
         {label: 'Oracle', value: '1'},
@@ -180,7 +205,8 @@ export default {
     getSelectionDetail () {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      this.getEvent(selectRecords)
+      console.log(selectRecords)
+      this.getDetailEvent(selectRecords)
     },
     getRemoveSelection () {
       const $table = this.$refs.xTable
@@ -191,9 +217,6 @@ export default {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
       this.editEvent(selectRecords)
-    },
-    cellDBLClickEvent ({row}) {
-      this.editEvent(row)
     },
     insertEvent () {
       this.formData = {
@@ -208,21 +231,6 @@ export default {
         password: ''
       }
       this.selectRow = null
-      this.showEdit = true
-    },
-    getEvent (row) {
-      this.formData = {
-        mark: row.mark,
-        sqlType: row.sqlType,
-        host: row.host,
-        user: row.user,
-        founder: row.founder,
-        port: row.port,
-        dbName: row.dbName,
-        encoding: row.encoding,
-        password: row.password
-      }
-      this.selectRow = row
       this.showEdit = true
     },
     editEvent (row) {
@@ -257,6 +265,34 @@ export default {
           $table.insert(this.formData)
         }
       }, 500)
+    },
+    closeEvent () {
+      console.log('ccccccc')
+      this.submitLoading = true
+      setTimeout(() => {
+        this.submitLoading = false
+        this.showDetail = false
+      }, 500)
+    },
+    getDetailEvent (row) {
+      const showField = {
+        mark: '标识',
+        sqlType: '数据库类型',
+        host: '主机名',
+        user: '用户名',
+        founder: '创建人',
+        port: '端口号',
+        dbName: '数据库名称',
+        encoding: '连接编码',
+        password: '密码'
+      }
+      this.detailData = ['mark', 'sqlType', 'host', 'user', 'founder', 'port', 'dbName', 'encoding', 'password'].map(field => {
+        return {label: showField[field], value: row[field]}
+      })
+      this.showDetail = true
+    },
+    cellDBLClickEvent ({row}) {
+      this.getDetailEvent(row)
     }
   }
 }
