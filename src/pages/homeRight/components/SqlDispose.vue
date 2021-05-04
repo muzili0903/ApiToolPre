@@ -8,6 +8,7 @@
       <div class="button" @click="getEditSelection"><span style="color: darkgray" class="iconfont">&#xe62c;</span> 修改
       </div>
       <div class="button" @click="getRemoveSelection"><span style="color: red" class="iconfont">&#xe60b;</span> 删除</div>
+      <div class="button" @click="getLinkSelection"><span style="color: red" class="iconfont">&#xe61e;</span> 连接测试</div>
     </div>
     <div class="content">
       <vxe-table
@@ -26,6 +27,7 @@
         <vxe-table-column field="user" title="用户名"></vxe-table-column>
         <vxe-table-column field="founder" title="创建人"></vxe-table-column>
         <vxe-table-column field="createTime" title="创建时间"></vxe-table-column>
+        <vxe-table-column field="linkTest" title="连接情况"></vxe-table-column>
       </vxe-table>
       <vxe-pager
         background
@@ -205,7 +207,6 @@ export default {
     getSelectionDetail () {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      console.log(selectRecords)
       this.getDetailEvent(selectRecords)
     },
     getRemoveSelection () {
@@ -217,6 +218,12 @@ export default {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
       this.editEvent(selectRecords)
+    },
+    getLinkSelection () {
+      // TODD 获取到sql配置的id
+      const $table = this.$refs.xTable
+      const selectRecords = $table.getRadioRecord()
+      console.log(selectRecords['id'])
     },
     insertEvent () {
       this.formData = {
@@ -284,9 +291,10 @@ export default {
         port: '端口号',
         dbName: '数据库名称',
         encoding: '连接编码',
-        password: '密码'
+        password: '密码',
+        linkTest: '连接情况'
       }
-      this.detailData = ['mark', 'sqlType', 'host', 'user', 'founder', 'port', 'dbName', 'encoding', 'password'].map(field => {
+      this.detailData = ['mark', 'sqlType', 'host', 'user', 'founder', 'port', 'dbName', 'encoding', 'password', 'linkTest'].map(field => {
         return {label: showField[field], value: row[field]}
       })
       this.showDetail = true
