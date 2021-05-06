@@ -73,6 +73,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'SqlDispose',
   components: {},
@@ -190,6 +192,10 @@ export default {
     this.formItems[6].itemRender.options = this.sqlTypeList
     this.formItems[8].itemRender.options = this.encodingList
   },
+  // 生命周期函数 页面挂载后执行 getSqlInfo 获取数据库配置数据
+  mounted () {
+    this.getSqlInfo()
+  },
   methods: {
     findList3 () {
       this.loading3 = true
@@ -301,6 +307,18 @@ export default {
     },
     cellDBLClickEvent ({row}) {
       this.getDetailEvent(row)
+    },
+    getSqlInfo () {
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/disposeData'
+      }).then(this.getSqlInfoSucc)
+    },
+    getSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0 && res.data) {
+        console.log(res)
+      }
     }
   }
 }

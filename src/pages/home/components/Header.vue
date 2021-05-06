@@ -47,6 +47,7 @@ export default {
         console.log(res.data)
         res = res.data
         if (res.code === 0 && res.data) {
+          console.log('11111')
           this.$store.commit('changeUserName', '')
           this.$router.push({path: '/signin'})
         }
