@@ -81,27 +81,7 @@ export default {
   data () {
     return {
       defaultSelecteRow: 10002,
-      tableData: [
-        {
-          mark: 'mark',
-          sqlType: 'sqlType',
-          host: 'host',
-          user: 'user',
-          founder: 'founder',
-          port: 'port',
-          dbName: 'dbName',
-          encoding: 'encoding'
-        },
-        {id: 10002, user: 'Test2', mark: 'Test', sqlType: 'Women', founder: 22, host: 'Guangzhou'},
-        {id: 10003, user: 'Test3', mark: 'PM', sqlType: 'Man', founder: 32, host: 'Shanghai'},
-        {id: 10004, user: 'Test4', mark: 'Designer', sqlType: 'Women ', age: 23, host: 'vxe-table 从入门到放弃'},
-        {id: 10005, user: 'Test5', mark: 'Develop', sqlType: 'Women ', age: 30, host: 'Shanghai'},
-        {id: 10006, user: 'Test6', mark: 'Designer', sqlType: 'Women ', age: 21, host: 'vxe-table 从入门到放弃'},
-        {id: 10007, user: 'Test7', mark: 'Test', sqlType: 'Man ', age: 29, host: 'vxe-table 从入门到放弃'},
-        {id: 10008, user: 'Test8', mark: 'Develop', sqlType: 'Man ', age: 35, host: 'vxe-table 从入门到放弃'},
-        {id: 10009, user: 'Test9', mark: 'Test', sqlType: 'Man ', age: 29, host: 'vxe-table 从入门到放弃'},
-        {id: 10010, user: 'Test10', mark: 'Develop', sqlType: 'Man ', age: 35, host: 'vxe-table 从入门到放弃'}
-      ],
+      tableData2: [],
       loading3: false,
       tableData3: [],
       tablePage3: {
@@ -201,8 +181,8 @@ export default {
       this.loading3 = true
       setTimeout(() => {
         this.loading3 = false
-        this.tablePage3.totalResult = 16
-        this.tableData3 = this.tableData
+        // this.tablePage3.totalResult = 10
+        this.tableData3 = this.tableData2
       }, 300)
     },
     handlePageChange3 ({currentPage, pageSize}) {
@@ -317,8 +297,19 @@ export default {
     getSqlInfoSucc (res) {
       res = res.data
       if (res.code === 0 && res.data) {
-        console.log(res)
+        const data = res.data
+        this.tablePage3.totalResult = data.length
+        for (let i = 0; i < this.tablePage3.totalResult; i++) {
+          const dic = {}
+          const dic1 = data[i]['fields']
+          dic['id'] = data[i]['pk']
+          for (let key in dic1) {
+            dic[key] = dic1[key]
+          }
+          this.tableData2.push(dic)
+        }
       }
+      console.log(this.tableData2)
     }
   }
 }

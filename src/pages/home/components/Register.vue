@@ -72,7 +72,7 @@ export default {
       }).then((res) => {
         console.log(res.data)
         res = res.data
-        if (res.code === 0 && res.data) {
+        if (res.code === 0) {
           this.dialog.sendVal = true
           this.dialog.content = '用户注册成功'
           this.dialog.type = 'confirm-skip'
