@@ -175,13 +175,14 @@ export default {
   // 生命周期函数 页面挂载后执行 getSqlInfo 获取数据库配置数据
   mounted () {
     this.getSqlInfo()
+    // this.getSqlInfoAllNum()
   },
   methods: {
     findList3 () {
       this.loading3 = true
       setTimeout(() => {
         this.loading3 = false
-        // this.tablePage3.totalResult = 10
+        // this.tablePage3.totalResult = 32
         this.tableData3 = this.tableData2
       }, 300)
     },
@@ -189,6 +190,7 @@ export default {
       this.tablePage3.currentPage = currentPage
       this.tablePage3.pageSize = pageSize
       this.findList3()
+      this.getSqlInfo()
     },
     getSelectionDetail () {
       const $table = this.$refs.xTable
@@ -289,9 +291,13 @@ export default {
       this.getDetailEvent(row)
     },
     getSqlInfo () {
+      let formData = new FormData()
+      formData.append('currentPage', this.tablePage3.currentPage)
+      formData.append('pageSize', this.tablePage3.pageSize)
       axios({
         method: 'post',
-        url: '/api/sqlDispose/disposeData'
+        url: '/api/sqlDispose/disposeData',
+        data: formData
       }).then(this.getSqlInfoSucc)
     },
     getSqlInfoSucc (res) {
@@ -299,7 +305,7 @@ export default {
       if (res.code === 0 && res.data) {
         const data = res.data
         this.tablePage3.totalResult = data.length
-        for (let i = 0; i < this.tablePage3.totalResult; i++) {
+        for (let i = 0; i < data.length; i++) {
           const dic = {}
           const dic1 = data[i]['fields']
           dic['id'] = data[i]['pk']
@@ -309,7 +315,18 @@ export default {
           this.tableData2.push(dic)
         }
       }
-      console.log(this.tableData2)
+    },
+    getSqlInfoAllNum () {
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/disposeAll'
+      }).then(this.getSqlInfoAllNumSucc)
+    },
+    getSqlInfoAllNumSucc (res) {
+      res = res.data
+      if (res.code === 0 && res.data) {
+        this.tablePage3.totalResult = res.data.total
+      }
     }
   }
 }
