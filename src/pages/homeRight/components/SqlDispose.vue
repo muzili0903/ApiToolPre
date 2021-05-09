@@ -175,20 +175,20 @@ export default {
   // 生命周期函数 页面挂载后执行 getSqlInfo 获取数据库配置数据
   mounted () {
     this.getSqlInfo()
-    // this.getSqlInfoAllNum()
+    this.getSqlInfoAllNum()
   },
   methods: {
     findList3 () {
       this.loading3 = true
       setTimeout(() => {
         this.loading3 = false
-        // this.tablePage3.totalResult = 32
         this.tableData3 = this.tableData2
       }, 300)
     },
     handlePageChange3 ({currentPage, pageSize}) {
       this.tablePage3.currentPage = currentPage
       this.tablePage3.pageSize = pageSize
+      this.tableData2 = []
       this.findList3()
       this.getSqlInfo()
     },
@@ -304,7 +304,6 @@ export default {
       res = res.data
       if (res.code === 0 && res.data) {
         const data = res.data
-        this.tablePage3.totalResult = data.length
         for (let i = 0; i < data.length; i++) {
           const dic = {}
           const dic1 = data[i]['fields']
