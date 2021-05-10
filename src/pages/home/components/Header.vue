@@ -46,8 +46,10 @@ export default {
       }).then((res) => {
         console.log(res.data)
         res = res.data
-        if (res.code === 0 && res.data) {
+        if (res.code === 0) {
+          console.log('11111')
           this.$store.commit('changeUserName', '')
+          this.$store.commit('changeIndex', 'Index')
           this.$router.push({path: '/signin'})
         }
         if (res.code !== 0) {

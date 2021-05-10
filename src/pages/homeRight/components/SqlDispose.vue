@@ -26,7 +26,7 @@
         <vxe-table-column field="host" title="主机名"></vxe-table-column>
         <vxe-table-column field="user" title="用户名"></vxe-table-column>
         <vxe-table-column field="founder" title="创建人"></vxe-table-column>
-        <vxe-table-column field="createTime" title="创建时间"></vxe-table-column>
+        <vxe-table-column field="create_time" title="创建时间"></vxe-table-column>
         <vxe-table-column field="linkTest" title="连接情况"></vxe-table-column>
       </vxe-table>
       <vxe-pager
@@ -73,33 +73,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+import {mapState} from 'vuex'
+
 export default {
   name: 'SqlDispose',
   components: {},
   data () {
     return {
       defaultSelecteRow: 10002,
-      tableData: [
-        {
-          mark: 'mark',
-          sqlType: 'sqlType',
-          host: 'host',
-          user: 'user',
-          founder: 'founder',
-          port: 'port',
-          dbName: 'dbName',
-          encoding: 'encoding'
-        },
-        {id: 10002, user: 'Test2', mark: 'Test', sqlType: 'Women', founder: 22, host: 'Guangzhou'},
-        {id: 10003, user: 'Test3', mark: 'PM', sqlType: 'Man', founder: 32, host: 'Shanghai'},
-        {id: 10004, user: 'Test4', mark: 'Designer', sqlType: 'Women ', age: 23, host: 'vxe-table 从入门到放弃'},
-        {id: 10005, user: 'Test5', mark: 'Develop', sqlType: 'Women ', age: 30, host: 'Shanghai'},
-        {id: 10006, user: 'Test6', mark: 'Designer', sqlType: 'Women ', age: 21, host: 'vxe-table 从入门到放弃'},
-        {id: 10007, user: 'Test7', mark: 'Test', sqlType: 'Man ', age: 29, host: 'vxe-table 从入门到放弃'},
-        {id: 10008, user: 'Test8', mark: 'Develop', sqlType: 'Man ', age: 35, host: 'vxe-table 从入门到放弃'},
-        {id: 10009, user: 'Test9', mark: 'Test', sqlType: 'Man ', age: 29, host: 'vxe-table 从入门到放弃'},
-        {id: 10010, user: 'Test10', mark: 'Develop', sqlType: 'Man ', age: 35, host: 'vxe-table 从入门到放弃'}
-      ],
+      tableData2: [],
       loading3: false,
       tableData3: [],
       tablePage3: {
@@ -190,18 +173,30 @@ export default {
     this.formItems[6].itemRender.options = this.sqlTypeList
     this.formItems[8].itemRender.options = this.encodingList
   },
+  computed: {
+    ...mapState({
+      userName: 'userName'
+    })
+  },
+  // 生命周期函数 页面挂载后执行 getSqlInfo 获取数据库配置数据
+  mounted () {
+    this.getSqlInfo()
+    this.getSqlInfoAllNum()
+  },
   methods: {
     findList3 () {
       this.loading3 = true
       setTimeout(() => {
         this.loading3 = false
-        this.tablePage3.totalResult = 16
-        this.tableData3 = this.tableData
+        this.tableDataMap(this.tableData2)
+        this.tableData3 = this.tableData2
       }, 300)
     },
     handlePageChange3 ({currentPage, pageSize}) {
       this.tablePage3.currentPage = currentPage
       this.tablePage3.pageSize = pageSize
+      this.tableData2 = []
+      this.getSqlInfo()
       this.findList3()
     },
     getSelectionDetail () {
@@ -269,6 +264,7 @@ export default {
         if (this.selectRow) {
           Object.assign(this.selectRow, this.formData)
         } else {
+          this.insertSqlInfo(this.formData)
           $table.insert(this.formData)
         }
       }, 500)
@@ -301,6 +297,74 @@ export default {
     },
     cellDBLClickEvent ({row}) {
       this.getDetailEvent(row)
+    },
+    getSqlInfo () {
+      let formData = new FormData()
+      formData.append('currentPage', this.tablePage3.currentPage)
+      formData.append('pageSize', this.tablePage3.pageSize)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/disposeData',
+        data: formData
+      }).then(this.getSqlInfoSucc)
+    },
+    getSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0 && res.data) {
+        const data = res.data
+        for (let i = 0; i < data.length; i++) {
+          const dic = {}
+          const dic1 = data[i]['fields']
+          dic['id'] = data[i]['pk']
+          for (let key in dic1) {
+            dic[key] = dic1[key]
+          }
+          this.tableData2.push(dic)
+        }
+      }
+    },
+    getSqlInfoAllNum () {
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/disposeAll'
+      }).then(this.getSqlInfoAllNumSucc)
+    },
+    getSqlInfoAllNumSucc (res) {
+      res = res.data
+      if (res.code === 0 && res.data) {
+        this.tablePage3.totalResult = res.data.total
+      }
+    },
+    insertSqlInfo (data) {
+      let formData = new FormData()
+      for (let keys in data) {
+        formData.append(keys, data[keys])
+      }
+      formData.append('founder', this.userName)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/insertSql',
+        data: formData
+      }).then(this.insertSqlInfoSucc)
+    },
+    insertSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+      }
+    },
+    tableDataMap (data) {
+      console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        const val = data[i]['linkTest']
+        if (val === 0) {
+          data[i]['linkTest'] = '失败'
+        } else if (val === 1) {
+          data[i]['linkTest'] = '成功'
+        } else {
+          data[i]['linkTest'] = '未测试'
+        }
+      }
     }
   }
 }
