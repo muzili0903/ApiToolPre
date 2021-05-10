@@ -26,7 +26,7 @@
         <vxe-table-column field="host" title="主机名"></vxe-table-column>
         <vxe-table-column field="user" title="用户名"></vxe-table-column>
         <vxe-table-column field="founder" title="创建人"></vxe-table-column>
-        <vxe-table-column field="createTime" title="创建时间"></vxe-table-column>
+        <vxe-table-column field="create_time" title="创建时间"></vxe-table-column>
         <vxe-table-column field="linkTest" title="连接情况"></vxe-table-column>
       </vxe-table>
       <vxe-pager
@@ -74,6 +74,7 @@
 
 <script>
 import axios from 'axios'
+import {mapState} from 'vuex'
 
 export default {
   name: 'SqlDispose',
@@ -172,6 +173,11 @@ export default {
     this.formItems[6].itemRender.options = this.sqlTypeList
     this.formItems[8].itemRender.options = this.encodingList
   },
+  computed: {
+    ...mapState({
+      userName: 'userName'
+    })
+  },
   // 生命周期函数 页面挂载后执行 getSqlInfo 获取数据库配置数据
   mounted () {
     this.getSqlInfo()
@@ -182,6 +188,7 @@ export default {
       this.loading3 = true
       setTimeout(() => {
         this.loading3 = false
+        this.tableDataMap(this.tableData2)
         this.tableData3 = this.tableData2
       }, 300)
     },
@@ -189,8 +196,8 @@ export default {
       this.tablePage3.currentPage = currentPage
       this.tablePage3.pageSize = pageSize
       this.tableData2 = []
-      this.findList3()
       this.getSqlInfo()
+      this.findList3()
     },
     getSelectionDetail () {
       const $table = this.$refs.xTable
@@ -257,6 +264,7 @@ export default {
         if (this.selectRow) {
           Object.assign(this.selectRow, this.formData)
         } else {
+          this.insertSqlInfo(this.formData)
           $table.insert(this.formData)
         }
       }, 500)
@@ -325,6 +333,37 @@ export default {
       res = res.data
       if (res.code === 0 && res.data) {
         this.tablePage3.totalResult = res.data.total
+      }
+    },
+    insertSqlInfo (data) {
+      let formData = new FormData()
+      for (let keys in data) {
+        formData.append(keys, data[keys])
+      }
+      formData.append('founder', this.userName)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/insertSql',
+        data: formData
+      }).then(this.insertSqlInfoSucc)
+    },
+    insertSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+      }
+    },
+    tableDataMap (data) {
+      console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        const val = data[i]['linkTest']
+        if (val === 0) {
+          data[i]['linkTest'] = '失败'
+        } else if (val === 1) {
+          data[i]['linkTest'] = '成功'
+        } else {
+          data[i]['linkTest'] = '未测试'
+        }
       }
     }
   }
