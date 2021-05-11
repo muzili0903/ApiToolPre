@@ -96,9 +96,9 @@ export default {
       showDetail: false,
       detailData: [],
       sqlTypeList: [
-        {label: 'MySQL', value: '0'},
-        {label: 'Oracle', value: '1'},
-        {label: 'SqlService', value: '2'}
+        {label: 'MySQL', value: 'MySQL'},
+        {label: 'Oracle', value: 'Oracle'},
+        {label: 'SqlService', value: 'SqlService'}
       ],
       encodingList: [
         {label: 'utf-8', value: 'utf-8'},
@@ -262,7 +262,9 @@ export default {
         this.submitLoading = false
         this.showEdit = false
         if (this.selectRow) {
-          Object.assign(this.selectRow, this.formData)
+          const id = this.selectRow['id']
+          this.updateSqlInfo(this.formData, id)
+          // Object.assign(this.selectRow, this.formData)
         } else {
           this.insertSqlInfo(this.formData)
           $table.insert(this.formData)
@@ -354,9 +356,9 @@ export default {
       }
     },
     tableDataMap (data) {
-      console.log(data)
       for (let i = 0; i < data.length; i++) {
         const val = data[i]['linkTest']
+        data[i]['create_time'] = data[i]['create_time'].replace('T', ' ').split('.')[0]
         if (val === 0) {
           data[i]['linkTest'] = '失败'
         } else if (val === 1) {
@@ -364,6 +366,26 @@ export default {
         } else {
           data[i]['linkTest'] = '未测试'
         }
+      }
+    },
+    updateSqlInfo (data, id) {
+      let formData = new FormData()
+      for (let keys in data) {
+        formData.append(keys, data[keys])
+      }
+      formData.append('update_person', this.userName)
+      formData.append('id', id)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/updateSql',
+        data: formData
+      }).then(this.updateSqlInfoSucc)
+    },
+    updateSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+        Object.assign(this.selectRow, this.formData)
       }
     }
   }
