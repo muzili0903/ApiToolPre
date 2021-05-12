@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feb808fb-9bef-4bd1-90f3-fe48a48010b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/homeRight/components/SqlDispose.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homeRight/components/SqlDispose.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,7 +165,7 @@
           <entry key="css" value="22" />
           <entry key="html" value="11" />
           <entry key="js" value="921" />
-          <entry key="vue" value="9808" />
+          <entry key="vue" value="9970" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -174,7 +173,7 @@
           <entry key="CSS" value="22" />
           <entry key="HTML" value="11" />
           <entry key="JavaScript" value="921" />
-          <entry key="Vue.js" value="9808" />
+          <entry key="Vue.js" value="9970" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -206,8 +205,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/homeRight/components/SqlDispose.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1574">
-              <caret line="272" column="6" lean-forward="true" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
+            <state relative-caret-position="-416">
+              <caret line="352" column="51" selection-start-line="352" selection-start-column="51" selection-end-line="352" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -235,10 +234,19 @@
                 <element signature="e#6024#6102#0" />
                 <element signature="e#6172#6319#0" />
                 <element signature="e#7643#7914#0" />
+                <element signature="e#7936#8276#0" />
+                <element signature="e#8819#8993#0" />
+                <element signature="e#9020#9532#0" />
                 <element signature="e#9046#9288#0" />
                 <element signature="e#9564#9602#0" />
+                <element signature="e#9622#9931#0" />
                 <element signature="e#9798#9898#0" />
+                <element signature="e#9958#10339#0" />
+                <element signature="e#10365#10493#0" />
+                <element signature="e#10526#10655#0" />
+                <element signature="e#10682#10995#0" />
                 <element signature="e#11142#11527#0" />
+                <element signature="e#11662#11676#0" />
                 <element signature="n#style#0;n#!!top" />
               </folding>
             </state>
@@ -877,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/homeRight/components/SqlDispose.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1574">
-          <caret line="272" column="6" lean-forward="true" selection-start-line="272" selection-start-column="6" selection-end-line="272" selection-end-column="6" />
+        <state relative-caret-position="-416">
+          <caret line="352" column="51" selection-start-line="352" selection-start-column="51" selection-end-line="352" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -906,10 +914,19 @@
             <element signature="e#6024#6102#0" />
             <element signature="e#6172#6319#0" />
             <element signature="e#7643#7914#0" />
+            <element signature="e#7936#8276#0" />
+            <element signature="e#8819#8993#0" />
+            <element signature="e#9020#9532#0" />
             <element signature="e#9046#9288#0" />
             <element signature="e#9564#9602#0" />
+            <element signature="e#9622#9931#0" />
             <element signature="e#9798#9898#0" />
+            <element signature="e#9958#10339#0" />
+            <element signature="e#10365#10493#0" />
+            <element signature="e#10526#10655#0" />
+            <element signature="e#10682#10995#0" />
             <element signature="e#11142#11527#0" />
+            <element signature="e#11662#11676#0" />
             <element signature="n#style#0;n#!!top" />
           </folding>
         </state>

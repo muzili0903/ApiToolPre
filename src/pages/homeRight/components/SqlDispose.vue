@@ -207,7 +207,7 @@ export default {
     getRemoveSelection () {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      this.removeEvent(selectRecords)
+      this.removeSqlInfo(selectRecords)
     },
     getEditSelection () {
       const $table = this.$refs.xTable
@@ -250,15 +250,10 @@ export default {
       this.selectRow = row
       this.showEdit = true
     },
-    removeEvent (row) {
-      console.log('delete')
-      const $table = this.$refs.xTable
-      $table.remove(row)
-    },
     submitEvent () {
       this.submitLoading = true
       setTimeout(() => {
-        const $table = this.$refs.xTable
+        // const $table = this.$refs.xTable
         this.submitLoading = false
         this.showEdit = false
         if (this.selectRow) {
@@ -267,7 +262,7 @@ export default {
           // Object.assign(this.selectRow, this.formData)
         } else {
           this.insertSqlInfo(this.formData)
-          $table.insert(this.formData)
+          // $table.insert(this.formData)
         }
       }, 500)
     },
@@ -353,6 +348,10 @@ export default {
       res = res.data
       if (res.code === 0) {
         this.$router.go(0)
+      } else {
+        // const $table = this.$refs.xTable
+        // const selectRecords = $table.getRadioRecord()
+        // console.log(selectRecords)
       }
     },
     tableDataMap (data) {
@@ -386,6 +385,23 @@ export default {
       if (res.code === 0) {
         this.$router.go(0)
         Object.assign(this.selectRow, this.formData)
+      }
+    },
+    removeSqlInfo (row) {
+      console.log(row)
+      let formData = new FormData()
+      formData.append('update_person', this.userName)
+      formData.append('id', row['id'])
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/deleteSql',
+        data: formData
+      }).then(this.deleteSqlInfoSucc)
+    },
+    deleteSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
       }
     }
   }
