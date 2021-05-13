@@ -68,6 +68,8 @@
           </template>
         </vxe-modal>
       </div>
+      <dialog-bar v-model="dialog.sendVal" :type="this.dialog.type" :title="this.dialog.title"
+                  :content="this.dialog.content" @confirm="insertAgain"></dialog-bar>
     </div>
   </div>
 </template>
@@ -75,10 +77,11 @@
 <script>
 import axios from 'axios'
 import {mapState} from 'vuex'
+import dialogBar from 'common/Dialog'
 
 export default {
   name: 'SqlDispose',
-  components: {},
+  components: {dialogBar},
   data () {
     return {
       defaultSelecteRow: 10002,
@@ -165,7 +168,13 @@ export default {
             }]
           }
         }
-      ]
+      ],
+      dialog: {
+        sendVal: false,
+        content: '',
+        title: '温馨提示',
+        type: 'confirm'
+      }
     }
   },
   created () {
@@ -349,9 +358,11 @@ export default {
       if (res.code === 0) {
         this.$router.go(0)
       } else {
-        // const $table = this.$refs.xTable
-        // const selectRecords = $table.getRadioRecord()
-        // console.log(selectRecords)
+        this.dialog.sendVal = true
+        this.dialog.content = res.msg
+        console.log(this.formData)
+        // this.insertAgain()
+        // this.insertSqlInfo(this.formData)
       }
     },
     tableDataMap (data) {
@@ -403,6 +414,10 @@ export default {
       if (res.code === 0) {
         this.$router.go(0)
       }
+    },
+    insertAgain () {
+      this.editEvent(this.formData)
+      this.selectRow = null
     }
   }
 }

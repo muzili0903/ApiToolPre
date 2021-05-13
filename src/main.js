@@ -20,6 +20,7 @@ fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
 Vue.use(VXETable)
+Vue.prototype.$XModal = VXETable.modal
 
 // Vue.prototype.$axios = Axios
 // Axios.defaults.baseURL = 'http://192.168.80.140:8888'
