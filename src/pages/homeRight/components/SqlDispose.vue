@@ -227,7 +227,7 @@ export default {
       // TODD 获取到sql配置的id
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      console.log(selectRecords['id'])
+      this.testSqlInfo(selectRecords['id'])
     },
     insertEvent () {
       this.formData = {
@@ -418,6 +418,21 @@ export default {
     insertAgain () {
       this.editEvent(this.formData)
       this.selectRow = null
+    },
+    testSqlInfo (id) {
+      let formData = new FormData()
+      formData.append('id', id)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/linkTest',
+        data: formData
+      }).then(this.linkSqlInfoSucc)
+    },
+    linkSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+      }
     }
   }
 }
