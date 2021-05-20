@@ -68,6 +68,8 @@
           </template>
         </vxe-modal>
       </div>
+      <dialog-bar v-model="dialog.sendVal" :type="this.dialog.type" :title="this.dialog.title"
+                  :content="this.dialog.content" @confirm="insertAgain"></dialog-bar>
     </div>
   </div>
 </template>
@@ -75,10 +77,11 @@
 <script>
 import axios from 'axios'
 import {mapState} from 'vuex'
+import dialogBar from 'common/Dialog'
 
 export default {
   name: 'SqlDispose',
-  components: {},
+  components: {dialogBar},
   data () {
     return {
       defaultSelecteRow: 10002,
@@ -96,9 +99,9 @@ export default {
       showDetail: false,
       detailData: [],
       sqlTypeList: [
-        {label: 'MySQL', value: '0'},
-        {label: 'Oracle', value: '1'},
-        {label: 'SqlService', value: '2'}
+        {label: 'MySQL', value: 'MySQL'},
+        {label: 'Oracle', value: 'Oracle'},
+        {label: 'SqlService', value: 'SqlService'}
       ],
       encodingList: [
         {label: 'utf-8', value: 'utf-8'},
@@ -165,7 +168,13 @@ export default {
             }]
           }
         }
-      ]
+      ],
+      dialog: {
+        sendVal: false,
+        content: '',
+        title: '温馨提示',
+        type: 'confirm'
+      }
     }
   },
   created () {
@@ -207,7 +216,7 @@ export default {
     getRemoveSelection () {
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      this.removeEvent(selectRecords)
+      this.removeSqlInfo(selectRecords)
     },
     getEditSelection () {
       const $table = this.$refs.xTable
@@ -218,7 +227,7 @@ export default {
       // TODD 获取到sql配置的id
       const $table = this.$refs.xTable
       const selectRecords = $table.getRadioRecord()
-      console.log(selectRecords['id'])
+      this.testSqlInfo(selectRecords['id'])
     },
     insertEvent () {
       this.formData = {
@@ -250,22 +259,19 @@ export default {
       this.selectRow = row
       this.showEdit = true
     },
-    removeEvent (row) {
-      console.log('delete')
-      const $table = this.$refs.xTable
-      $table.remove(row)
-    },
     submitEvent () {
       this.submitLoading = true
       setTimeout(() => {
-        const $table = this.$refs.xTable
+        // const $table = this.$refs.xTable
         this.submitLoading = false
         this.showEdit = false
         if (this.selectRow) {
-          Object.assign(this.selectRow, this.formData)
+          const id = this.selectRow['id']
+          this.updateSqlInfo(this.formData, id)
+          // Object.assign(this.selectRow, this.formData)
         } else {
           this.insertSqlInfo(this.formData)
-          $table.insert(this.formData)
+          // $table.insert(this.formData)
         }
       }, 500)
     },
@@ -351,12 +357,18 @@ export default {
       res = res.data
       if (res.code === 0) {
         this.$router.go(0)
+      } else {
+        this.dialog.sendVal = true
+        this.dialog.content = res.msg
+        console.log(this.formData)
+        // this.insertAgain()
+        // this.insertSqlInfo(this.formData)
       }
     },
     tableDataMap (data) {
-      console.log(data)
       for (let i = 0; i < data.length; i++) {
         const val = data[i]['linkTest']
+        data[i]['create_time'] = data[i]['create_time'].replace('T', ' ').split('.')[0]
         if (val === 0) {
           data[i]['linkTest'] = '失败'
         } else if (val === 1) {
@@ -364,6 +376,62 @@ export default {
         } else {
           data[i]['linkTest'] = '未测试'
         }
+      }
+    },
+    updateSqlInfo (data, id) {
+      let formData = new FormData()
+      for (let keys in data) {
+        formData.append(keys, data[keys])
+      }
+      formData.append('update_person', this.userName)
+      formData.append('id', id)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/updateSql',
+        data: formData
+      }).then(this.updateSqlInfoSucc)
+    },
+    updateSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+        Object.assign(this.selectRow, this.formData)
+      }
+    },
+    removeSqlInfo (row) {
+      console.log(row)
+      let formData = new FormData()
+      formData.append('update_person', this.userName)
+      formData.append('id', row['id'])
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/deleteSql',
+        data: formData
+      }).then(this.deleteSqlInfoSucc)
+    },
+    deleteSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
+      }
+    },
+    insertAgain () {
+      this.editEvent(this.formData)
+      this.selectRow = null
+    },
+    testSqlInfo (id) {
+      let formData = new FormData()
+      formData.append('id', id)
+      axios({
+        method: 'post',
+        url: '/api/sqlDispose/linkTest',
+        data: formData
+      }).then(this.linkSqlInfoSucc)
+    },
+    linkSqlInfoSucc (res) {
+      res = res.data
+      if (res.code === 0) {
+        this.$router.go(0)
       }
     }
   }
